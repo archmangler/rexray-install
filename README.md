@@ -2,6 +2,7 @@ Role Name
 =========
 
 - SUPER simple playbook to install rexray on an existing ceph cluster.
+- Uses the latest stable version of EMC's rexray binary agent
 
 Requirements
 ------------

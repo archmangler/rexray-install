@@ -22,11 +22,13 @@ No role dependencies at present.
 Example Playbook
 ================
 
+```
 ---
 - hosts: ceph-clients
   become: True
   roles:
    - rexray-install
+```
 
 License
 =======

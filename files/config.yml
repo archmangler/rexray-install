@@ -1,0 +1,17 @@
+rexray:
+  logLevel: error
+libstorage:
+  logging:
+    level: error
+  service: rbd
+  integration:
+    volume:
+      operations:
+        create:
+          default:
+            size: 4096
+        mount:
+          preempt: true
+        remove:
+          disable: true
+rbd:

@@ -1,0 +1,15 @@
+---
+# tasks file for rexray-install
+- name: install rexray using the install script from emcy
+  command: curl -sSL https://dl.bintray.com/emccode/rexray/install | sh -s -- stable
+
+- name: copy standard configuration file into place
+  copy:
+    src: rexray_config.yml
+    dest: /etc/rexray/config.yml
+    mode: 0664
+
+- name: restart rexray service
+  systemd:
+    name: rexray
+    state: reloaded
